@@ -1,33 +1,20 @@
-
-
-/**
- * Implements the Square Dance game.
- * This simple game allows the user to move a black square around
- * the screen, and change the square's size during the movement.
- * When the game starts, a square of 30 by 30 pixels is shown at the
- * top-left corner of the screen. The user controls the square as follows.
- * The 4 arrow keys are used to move the square up, down, left, and right.
- * The 'z' and 'x' keys are used, respectively, to decrement and increment
- * the square's size. The 'q' key is used to quit the game.
- */
-
 class SquareBounce {
-   field Square square; // the square of this game
-    int height;
-    int width;
-    int squareX;
-    int squareY;
-}
+   field Square square;
+    field int height;
+    field int width;
+    field int squareX;
+    field int squareY;
+
 
    /** Constructs a new Square Game. */
    constructor SquareGame new() {
       // Creates a square and positions it at the top-left
       // of the screen.
+        let height = 512;
+        let width = 256;
+        let squareX = 0;
+        let squareY = 0;
       let square = Square.new(squareX, squareY, 20);
-    int height = 512;
-    int width = 256;
-    int squareX = 0;
-    int squareY = 0;
       return this;
    }
 
@@ -43,9 +30,9 @@ class SquareBounce {
    method void moveSquare() {
 
       if (squareY > height) { do square.moveUp(); }
-      if (squareY <= 0) { do square.moveDown(); }
+      if (squareY = 0) { do square.moveDown(); }
       if (squareX > width) { do square.moveLeft(); }
-      if (squareX <= 0) { do square.moveRight(); }
+      if (squareX = 0) { do square.moveRight(); }
       do Sys.wait(5);  // delays the next movement
       return;
    }
@@ -65,10 +52,6 @@ class SquareBounce {
          if (key = 81)  { let exit = true; }     // q key
          if (key = 90)  { do square.decSize(); } // z key
          if (key = 88)  { do square.incSize(); } // x key
-         if (key = 131) { let direction = 1; }   // up arrow
-         if (key = 133) { let direction = 2; }   // down arrow
-         if (key = 130) { let direction = 3; }   // left arrow
-         if (key = 132) { let direction = 4; }   // right arrow
 
          // waits for the key to be released
          while (~(key = 0)) {
