@@ -1,0 +1,8 @@
+//hello world
+class HelloWorldKB {
+    function void HelloWorldKB() {
+    do Output.printString("Hello world!");
+    do Output.println();
+    return;
+    }
+}
