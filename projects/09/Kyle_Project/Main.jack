@@ -1,8 +1,13 @@
-//hello world
+//main for my program
 class Main {
-    function void main() {
-    do Output.printString("Hello world!");
-    do Output.println();
+function void main() {
+    var SquareBounce game;
+    let game = SquareBounce.new();
+    do game.run();
+    do game.dispose();
     return;
     }
 }
+
+
+
