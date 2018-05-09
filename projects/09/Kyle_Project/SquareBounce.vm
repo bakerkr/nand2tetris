@@ -2,9 +2,9 @@ function SquareBounce.new 0
 push constant 3
 call Memory.alloc 1
 pop pointer 0
-push constant 150
+push constant 220
 pop this 1
-push constant 450
+push constant 485
 pop this 2
 push constant 0
 push constant 0
@@ -138,6 +138,21 @@ push constant 0
 call Square.setYSpeed 2
 pop temp 0
 label IF_FALSE1
+push local 0
+push constant 90
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 0
+push constant 1
+call Square.setXSpeed 2
+pop temp 0
+push this 0
+push constant 1
+call Square.setYSpeed 2
+pop temp 0
+label IF_FALSE2
 label WHILE_EXP2
 push local 0
 push constant 0

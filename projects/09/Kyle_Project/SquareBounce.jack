@@ -8,8 +8,8 @@ class SquareBounce {
    constructor SquareBounce new() {
       // Creates a square and positions it at the top-left
       // of the screen.
-        let height = 150;
-        let width = 450;
+        let height = 220;
+        let width = 485;
         let square = Square.new(0, 0, 20);
         return this;
    }
@@ -61,6 +61,8 @@ class SquareBounce {
 
         if (key = 81)  { let exit = true; }     // q key
 if (key = 88)  { do square.setXSpeed(0); do square.setYSpeed(0); } // x key
+if (key = 90)  { do square.setXSpeed(1); do square.setYSpeed(1); } // z key
+
 
 
 
