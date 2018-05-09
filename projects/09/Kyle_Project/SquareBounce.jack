@@ -2,19 +2,15 @@ class SquareBounce {
    field Square square;
     field int height;
     field int width;
-    field int squareX;
-    field int squareY;
 
 
    /** Constructs a new Square Game. */
    constructor SquareBounce new() {
       // Creates a square and positions it at the top-left
       // of the screen.
-        let height = 512;
-        let width = 256;
-        let squareX = 0;
-        let squareY = 0;
-        let square = Square.new(squareX, squareY, 20);
+        let height = 450;
+        let width = 150;
+        let square = Square.new(0, 0, 20);
         return this;
    }
 
@@ -28,12 +24,15 @@ class SquareBounce {
 
    //move fuction for the square
    method void moveSquare() {
+        var int squareX;
+        var int squareY;
+        let squareX = square.getX();
+        let squareY = square.getY();
 
-        if (squareY = 50) { do square.moveUp(); let squareY = squareY + 1;}
-        if (squareY = 0) { do square.moveDown(); let squareY = squareY - 1;}
-        if (squareX = 50) { do square.moveLeft(); let squareX = squareX + 1;}
-        if (squareX = 0) { do square.moveRight(); let squareX = squareX - 1;}
 
+        do square.moveX();
+if (squareX > width) { do square.setXSpeed(); }
+        do square.moveY();
 
       do Sys.wait(5);  // delays the next movement
       return;

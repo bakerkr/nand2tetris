@@ -58,6 +58,30 @@ call Screen.drawRectangle 4
 pop temp 0
 push constant 0
 return
+function Square.setX 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push constant 0
+return
+function Square.setY 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 1
+push constant 0
+return
+function Square.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Square.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return
 function Square.moveUp 0
 push argument 0
 pop pointer 0

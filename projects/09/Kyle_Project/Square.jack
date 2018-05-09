@@ -2,12 +2,15 @@
 class Square {
 
 field int x, y; // screen location of the square's top-left corner
+field int xSpeed, ySpeed;
 field int size; // length of this square, in pixels
 
 /** Constructs a new square with a given location and size. */
 constructor Square new(int Ax, int Ay, int Asize) {
 let x = Ax;
 let y = Ay;
+let xSpeed = 1;
+let ySpeed = 1;
 let size = Asize;
 do draw();
 return this;
@@ -33,7 +36,65 @@ do Screen.drawRectangle(x, y, x + size, y + size);
 return;
 }
 
+method void setX(int _x){
+let x = _x;
+return;
 
+}
+
+method void setY(int _y){
+let y = _y;
+return;
+
+}
+
+method void setYSpeed(int _ySpeed){
+let ySpeed = _ySpeed;
+return;
+}
+
+method void setX(int _xSpeed){
+let xSpeed = _x;
+return;
+}
+
+method int getXSpeed(){
+return xSpeed;
+}
+
+method int getYSpeed(){
+return y;
+}
+
+method int getX(){
+return x;
+}
+
+method int getY(){
+return y;
+}
+
+method void moveY() {
+if (y > 1) {
+do Screen.setColor(false);
+do Screen.drawRectangle(x, (y + size) - 1, x + size, y + size);
+let y = y + ySpeed;
+do Screen.setColor(true);
+do Screen.drawRectangle(x, y, x + size, y + 1);
+}
+return;
+}
+
+method void moveX() {
+if (x > 1) {
+do Screen.setColor(false);
+do Screen.drawRectangle((x + size) - 1, y, x + size, y + size);
+let x = x + xSpeed;
+do Screen.setColor(true);
+do Screen.drawRectangle(x, y, x + 1, y + size);
+}
+return;
+}
 
 
 //up 1 pixel
