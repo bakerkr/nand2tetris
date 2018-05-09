@@ -53,8 +53,8 @@ let ySpeed = _ySpeed;
 return;
 }
 
-method void setX(int _xSpeed){
-let xSpeed = _x;
+method void setXSpeed(int _xSpeed){
+let xSpeed = _xSpeed;
 return;
 }
 
@@ -63,7 +63,7 @@ return xSpeed;
 }
 
 method int getYSpeed(){
-return y;
+return ySpeed;
 }
 
 method int getX(){
@@ -75,24 +75,20 @@ return y;
 }
 
 method void moveY() {
-if (y > 1) {
 do Screen.setColor(false);
 do Screen.drawRectangle(x, (y + size) - 1, x + size, y + size);
 let y = y + ySpeed;
 do Screen.setColor(true);
 do Screen.drawRectangle(x, y, x + size, y + 1);
-}
 return;
 }
 
 method void moveX() {
-if (x > 1) {
 do Screen.setColor(false);
 do Screen.drawRectangle((x + size) - 1, y, x + size, y + size);
 let x = x + xSpeed;
 do Screen.setColor(true);
 do Screen.drawRectangle(x, y, x + 1, y + size);
-}
 return;
 }
 
