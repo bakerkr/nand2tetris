@@ -1,0 +1,1 @@
+This program creates art by drawing a bouncing square on the screen.  It is so great that you will not want to miss a moment of this artistic masterpiece.  Need to step away?  You are in luck!  Just press "x" to pause and "z" to resume.
