@@ -22,7 +22,7 @@ class SquareBounce {
    }
 
 
-   //move fuction for the square
+   //move function for the square
    method void moveSquare() {
         var int squareX;
         var int squareY;
@@ -36,9 +36,6 @@ class SquareBounce {
         do square.moveY();
         if (squareY > height) { do square.setYSpeed(-2); }
         if (squareY < 5) { do square.setYSpeed(1); }
-
-
-
 
       do Sys.wait(5);  // delays the next movement
       return;
@@ -60,10 +57,8 @@ class SquareBounce {
          }
 
         if (key = 81)  { let exit = true; }     // q key
-if (key = 88)  { do square.setXSpeed(0); do square.setYSpeed(0); } // x key
-if (key = 90)  { do square.setXSpeed(1); do square.setYSpeed(1); } // z key
-
-
+        if (key = 88)  { do square.setXSpeed(0); do square.setYSpeed(0); } // x key
+        if (key = 90)  { do square.setXSpeed(1); do square.setYSpeed(1); } // z key
 
 
          // waits for the key to be released
@@ -72,8 +67,7 @@ if (key = 90)  { do square.setXSpeed(1); do square.setYSpeed(1); } // z key
             do moveSquare();
          }
 
-
-     } // while
+     }
      return;
    }
 }
