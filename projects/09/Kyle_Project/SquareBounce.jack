@@ -29,12 +29,12 @@ class SquareBounce {
    //move fuction for the square
    method void moveSquare() {
 
-      if (squareY > 512) { do square.moveUp(); }
-      if (squareY < height) { do square.moveUp(); }
-      if (squareY = 0) { do square.moveDown(); }
-      if (squareX > 256) { do square.moveLeft(); }
-      if (squareX < width) { do square.moveLeft(); }
-      if (squareX = 0) { do square.moveRight(); }
+        if (squareY = 50) { do square.moveUp(); let squareY = squareY + 1;}
+        if (squareY = 0) { do square.moveDown(); let squareY = squareY - 1;}
+        if (squareX = 50) { do square.moveLeft(); let squareX = squareX + 1;}
+        if (squareX = 0) { do square.moveRight(); let squareX = squareX - 1;}
+
+
       do Sys.wait(5);  // delays the next movement
       return;
    }

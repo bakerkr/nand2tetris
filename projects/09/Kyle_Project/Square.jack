@@ -35,6 +35,7 @@ return;
 
 
 
+
 //up 1 pixel
 method void moveUp() {
 if (y > 1) {
