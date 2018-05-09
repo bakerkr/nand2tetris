@@ -10,7 +10,7 @@ class SquareBounce {
       // of the screen.
         let height = 150;
         let width = 450;
-        let square = Square.new(10, 10, 20);
+        let square = Square.new(0, 0, 20);
         return this;
    }
 
@@ -31,10 +31,10 @@ class SquareBounce {
 
 
         do square.moveX();
-        if (squareX > width) { do square.setXSpeed(-1); }
-        if (squareX < 5) { do square.setXSpeed(1) }
+        if (squareX > width) { do square.setXSpeed(-2); }
+        if (squareX < 5) { do square.setXSpeed(1); }
         do square.moveY();
-        if (squareY > height) { do square.setYSpeed(-1); }
+        if (squareY > height) { do square.setYSpeed(-2); }
         if (squareY < 5) { do square.setYSpeed(1); }
 
       do Sys.wait(5);  // delays the next movement
