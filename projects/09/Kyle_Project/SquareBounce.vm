@@ -123,6 +123,21 @@ push constant 0
 not
 pop local 1
 label IF_FALSE0
+push local 0
+push constant 88
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+push constant 0
+call Square.setXSpeed 2
+pop temp 0
+push this 0
+push constant 0
+call Square.setYSpeed 2
+pop temp 0
+label IF_FALSE1
 label WHILE_EXP2
 push local 0
 push constant 0
